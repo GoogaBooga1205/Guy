@@ -1,0 +1,47 @@
+*{
+    padding: 2vw;
+    margin: 2vw;
+    color: blue;
+    text-align: center;
+
+}
+.GridContainer{
+    display: grid;
+    grid-template-areas:
+     'header header header'
+     'left right right';
+
+}
+.item1{
+    grid-area: header;
+    background-color: lightblue;
+    width: 50%;
+    transition: width 2s;
+}
+.item1:hover{
+    width: 89.5%;
+    background-color: rgb(255, 0, 225);
+}
+.item2{
+    grid-area: left;
+    background-color: lightblue;
+
+}
+.item3{
+    grid-area: right;
+    background-color: lightblue;
+
+}
+@media only screen and (max-width: 800px) {
+    .GridContainer{
+        display: grid;
+        grid-template-areas:
+         'header'
+         'left'
+         'right';
+    }
+    *{
+        background-color: aqua;
+    }
+    
+}
